@@ -1,0 +1,36 @@
+{
+    "name": "hello-world",
+    "version": "1.0.0",
+    "description": "Can log \"hello world\" to the console!",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "publish-lib": "npm run build && npm publish",
+        "publish-beta": "npm run build && npm publish --tag beta",
+        "publish-dryrun": "npm run build && npm publish --dry-run"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Battosuai/ts-library-starter"
+    },
+    "keywords": [
+        "demo",
+        "typescript",
+        "library",
+        "hello world"
+    ],
+    "author": "Battousai <imdjiban@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Battosuai/ts-library-starter/issues"
+    },
+    "homepage": "https://github.com/Battosuai/ts-library-starter#readme",
+    "devDependencies": {
+        "typescript": "^5.4.5"
+    }
+}
