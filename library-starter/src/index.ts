@@ -1,1 +1,1 @@
-export { sayHello } from './hello-world';
+export { wordCount } from './word';
