@@ -1,1 +1,1 @@
-export { wordCount } from './word';
+export { wordCount, getCharacterEditDistance } from './word';

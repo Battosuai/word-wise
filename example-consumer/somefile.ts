@@ -1,4 +1,4 @@
-import { wordCount } from 'word-wise';
+import { wordCount, getCharacterEditDistance } from 'word-wise';
 
 const string1 = 'How are you?';
 const string2 =
@@ -6,7 +6,28 @@ const string2 =
 const string3 = '  How are     you?';
 const string4 = 'What is,it?Go fuck yourself!!Heya';
 
-console.log(wordCount(string1));
-console.log(wordCount(string2));
-console.log(wordCount(string3));
-console.log(wordCount(string4));
+// console.log(wordCount(string1));
+// console.log(wordCount(string2));
+// console.log(wordCount(string3));
+// console.log(wordCount(string4));
+
+console.log(
+    getCharacterEditDistance('john/smith@oracle.com', 'john.smith@oracle.com')
+);
+console.log(
+    getCharacterEditDistance('John.Smith@oracle.com', 'john.smith@oracle.com')
+);
+console.log(
+    getCharacterEditDistance('jhon_smith@hotmail.com', 'john_smith@hotmail.com')
+);
+console.log(
+    getCharacterEditDistance('tom simpson@gmail.com', 'tomsimpson@gmail.com')
+);
+console.log(
+    getCharacterEditDistance(
+        'andrew_johnson@email.net',
+        'andrew.johnstone@email.net'
+    )
+);
+console.log(getCharacterEditDistance('', 'andrew.johnstone@email.net'));
+console.log(getCharacterEditDistance('', '  '));
